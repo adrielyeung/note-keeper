@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Archived notes{% endblock %}</h1>
+  {% if g.user %}
+    <a class="action" href="{{ url_for('note.index') }}">Main</a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% for note in notes %}
+  {% if g.user['id'] == note['author_id'] and note['archived'] == 1 %}
+    <article class="note">
+      <header>
+        <div>
+          <h1>{{ note['title'] }}</h1>
+          <div class="about">by {{ note['username'] }} on {{ note['created'].strftime('%d-%m-%Y') }}</div>
+        </div>
+          <a class="action" href="{{ url_for('note.update', id=note['id']) }}">Edit/Delete</a>
+          <a class="action" href="{{ url_for('note.unarchive', id=note['id']) }}">Unarchive</a>
+      </header>
+      <p class="body">{{ note['body'] }}</p>
+    </article>
+    {% if not loop.last %} <!--if not last note, add visual separation of current note from the next-->
+      <hr>
+    {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endblock %}
