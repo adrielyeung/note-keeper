@@ -1,0 +1,11 @@
+You had good documentation, functional descriptions for each file helped in navigating the code. It would’ve been better if you included your API endpoints in there as well. One of the requirements was to share API details with the UX team, including API endpoints would’ve made it possible to for the UX team to identify endpoints without having to look through the code.
+Including a front-end is a nice touch and certainly helped with testing the functionality. We weren’t expecting a front-end to be built into the API however and in terms of maintaining code it is better to separate the API from the UI. Baking a UI into your API makes the code a bit less clear on its functionality. E.g. @bp.route('/create', methods=('GET', 'POST')), having a GET method for an endpoint named create is confusing.
+You have used verb and actions when naming your API endpoints. This isn’t considered good practice since it’s not intuitive and can become overwhelming when you have a lot of endpoints. Using strictly nouns for endpoint names and HTTP methods for actions would’ve been a better implementation.
+
+e.g.
+POST    /v1/notes     – Create a new note
+GET     /v1/notes/:id – Retrieve a note
+PUT     /v1/notes/:id – Update a note by replacing its content
+DELETE  /v1/notes/:id – Delete a note
+
+You had all the functional requirements, which is very positive and using Python and Flask for simplicity is a choice we like. However you’ve made your code more complex by including the UI. That and what’s mentioned above are the reasons not to progress your application further.
