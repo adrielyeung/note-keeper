@@ -1,7 +1,7 @@
 # note-keeper
 Manage personal notes in a multi-user environment, such as across an organisation.
 
-Built using Flask in Python, website developed in HTML (template in CSS) and database managed in SQL. The scripts and this guide are based on online tutorial of Flask (http://flask.pocoo.org/docs/1.0/tutorial/), the code of which can be found at https://github.com/pallets/flask/tree/1.0.2/examples/tutorial - credits to the Pallets team for creating this easy-to-follow tutorial.
+Built using Flask 1.0 in Python 3, website developed in HTML (template in CSS) and database managed in SQLite 3. The scripts and this guide are based on online tutorial of Flask (http://flask.pocoo.org/docs/1.0/tutorial/), the code of which can be found at https://github.com/pallets/flask/tree/1.0.2/examples/tutorial - credits to the Pallets team for creating this easy-to-follow tutorial.
 
 ## 1. Getting Started - How to run the application
 ### Install the application
