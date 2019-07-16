@@ -114,10 +114,10 @@ waitress.serve(flaskr.create_app())
 Then go to the URL as provided. Use keyboard ```CTRL-C``` to stop serving.
 
 ## 3. Built With - Choice of technology
-- Flask in Python for the functionalities.
+- Flask 1.0 in Python 3 for the functionalities.
 - HTTP for the website.
 - CSS for the template of the app.
-- SQL for the personal notes in a database.
+- SQLite 3 for the personal notes in a database.
 
 Choice of the above technologies is mainly due to simplicity, since this is the first proper web application I have written. Also detailed guidance readily available online.
 
